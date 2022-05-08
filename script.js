@@ -76,11 +76,15 @@ var special = [
 "^",
 "&",
 "*",
-"/",
-"_"
+"(",
+")"
 ]; 
 
 function generateBtn() {
+  var length = window.prompt("Pick password length 8-126 characters");
+  if (length > 8 && !length <+ 128){
+    return;
+  }
 
 }
 
