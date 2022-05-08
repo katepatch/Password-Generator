@@ -82,40 +82,42 @@ var special = [
 
 function generatePassword(){
   var passwordLength = window.prompt("Choose between 8-128 characters");
-  if (passwordLength >+ 8 || !passwordLength <= 128){
-    generatePassword();
-    return;
+  if (!passwordLength >= 8 || !passwordLength <= 128){
+    //generatePassword();
+    console.log(passwordLength);
+    //return;
   }
-}
-  var special = window.prompt("Special Characters? - YES or NO")
-  special = special.toUpperCase();
+
+  var special = window.prompt("Special Characters? YES or NO")
+  
 
   if (special == "YES"){
   } else {
-
-  }
+  };
   var alphabetLower = window.prompt("Lowercase Letters? YES or NO")
   alphabetLower = alphabetLower.toUpperCase();
 
   if (alphabetLower == "YES") {
 
   } else {
-
-  }
+    
+  };
   var alphabetUpper = window.prompt("Uppercase Letters? YES or NO")
   alphabetUpper = alphabetUpper.toUpperCase();
   if (alphabetUpper == "YES") {
 
   } else {
-
-  }
+    
+  };
   var numbers = window.prompt("Numbers? YES or NO")
-  numbers = numbers.toUpperCase();
+ 
   if (numbers == "YES") {
 
   } else {
     
   }
+  return;
+};
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -134,3 +136,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
