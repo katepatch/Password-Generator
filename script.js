@@ -83,9 +83,7 @@ var special = [
 function generatePassword(){
   var passwordLength = window.prompt("Choose between 8-128 characters");
   if (!passwordLength >= 8 || !passwordLength <= 128){
-    //generatePassword();
-    console.log(passwordLength);
-    //return;
+    
   }
 
   var special = window.prompt("Special Characters? YES or NO")
