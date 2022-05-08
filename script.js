@@ -1,6 +1,6 @@
 // Assignment code here
-var alphabetLower = 
-["a",
+var alphabetLower = [
+"a",
 "b",
 "c",
 "d",
@@ -25,9 +25,10 @@ var alphabetLower =
 "w",
 "x",
 "y",
-"z"]
-var alphabetUpper = 
-["A",
+"z"
+];
+var alphabetUpper = [
+"A",
 "B",
 "C",
 "D",
@@ -52,20 +53,22 @@ var alphabetUpper =
 "W",
 "X",
 "Y",
-"Z"]
-var numbers = 
-[1,
-2,
-3,
-4,
-5,
-6,
-7,
-8,
-9,
-0]
-var special =
-["!",
+"Z"
+];
+var numbers = [
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"0"
+];
+var special = [
+"!",
 "@",
 "#",
 "$",
@@ -74,7 +77,8 @@ var special =
 "&",
 "*",
 "/",
-"_"] 
+"_"
+]; 
 
 function generateBtn() {
 
