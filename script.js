@@ -80,13 +80,31 @@ var special = [
 ")"
 ]; 
 
-function generateBtn() {
-  var length = window.prompt("Pick password length 8-126 characters");
-  if (length > 8 && !length <+ 128){
+function generatePassword(){
+  var passwordLength = window.prompt("Choose between 8-128 characters");
+  if (passwordLength >+ 8 || !passwordLength <= 128){
+    generatePassword();
     return;
   }
-
 }
+  var special = window.prompt("Special Characters? - YES or NO")
+  special = special.toUpperCase();
+
+  if (special == "YES"){
+  } else {
+
+  }
+  var alphabetLower = window.prompt("Lowercase Letters? YES or NO")
+  alphabetLower = alphabetLower.toUpperCase();
+
+  if (alphabetLower == "YES") {
+
+  } else {
+
+  }
+  var alphabetUpper = window.prompt("Uppercase Letters? YES or NO")
+  alphabetUpper = alphabetUpper.toUpperCase();
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
