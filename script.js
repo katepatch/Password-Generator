@@ -104,7 +104,18 @@ function generatePassword(){
   }
   var alphabetUpper = window.prompt("Uppercase Letters? YES or NO")
   alphabetUpper = alphabetUpper.toUpperCase();
+  if (alphabetUpper == "YES") {
 
+  } else {
+
+  }
+  var numbers = window.prompt("Numbers? YES or NO")
+  numbers = numbers.toUpperCase();
+  if (numbers == "YES") {
+
+  } else {
+    
+  }
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
