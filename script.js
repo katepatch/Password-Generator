@@ -81,7 +81,7 @@ var special = [
 ]; 
 
 function generatePassword(){
-  var passwordLength = prompt("Let's get you a fancy new password!");
+  var passwordLength = prompt("Let's get you a fancy new password!  Please choose betwenn 8 and 128 characters.");
   if (passwordLength >= 8 || passwordLength <= 128){
     generatePassword();
   }
@@ -134,4 +134,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
+writePassword();
