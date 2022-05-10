@@ -1,32 +1,6 @@
 // Assignment code here
-var alphabetLower = [
-"a",
-"b",
-"c",
-"d",
-"e",
-"f",
-"g",
-"h",
-"i",
-"j",
-"k",
-"l",
-"m",
-"n",
-"o",
-"p",
-"q",
-"r",
-"s",
-"t",
-"u",
-"v",
-"w",
-"x",
-"y",
-"z"
-];
+var passwordLength
+var alphabetLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w","x", "y", "z"];
 var alphabetUpper = [
 "A",
 "B",
@@ -81,11 +55,15 @@ var special = [
 ]; 
 
 function generatePassword(){
-  var passwordLength = prompt("Let's get you a fancy new password!  Please choose betwenn 8 and 128 characters.");
-  if (passwordLength >= 8 || passwordLength <= 128){
+  var passwordLength = window.prompt("Let's get you a fancy new password!  Please choose between 8 and 128 characters.");
+  if (passwordLength > 128) {
+    var passwordLength = prompt("Please try again.  Cannot exceed 128 characters.")
+    generatePassword();
+  } else if (passwordLength < 8) {
+    var passwordLength = prompt("Please try again.  Must have more than 8 characters")
     generatePassword();
   }
-
+  console.log(passwordLength)
   var special = window.prompt("Special Characters? YES or NO")
   
 
@@ -134,4 +112,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-writePassword();
