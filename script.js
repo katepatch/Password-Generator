@@ -64,13 +64,8 @@ function generatePassword(){
     generatePassword();
   }
   console.log(passwordLength)
-  var special = window.prompt("Special Characters? YES or NO")
   
-
-  if (special == "YES"){
-  } else {
-  };
-  console.log(special)
+  
   var alphabetLower = window.prompt("Lowercase Letters? YES or NO")
   alphabetLower = alphabetLower.toUpperCase();
 
@@ -96,12 +91,20 @@ function generatePassword(){
     
   }
   console.log(numbers);
+  var special = window.prompt("Special Characters? YES or NO")
+  special = special.toUpperCase();
+    if (special == "YES"){
+  } else {
+  };
+  console.log(special)
   return;
 
 };
 
 
 //gonna try to make a loop to generate this code
+var securedPassword = "";
+
 
 
 // Get references to the #generate element
