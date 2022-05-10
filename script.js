@@ -70,6 +70,7 @@ function generatePassword(){
   if (special == "YES"){
   } else {
   };
+  console.log(special)
   var alphabetLower = window.prompt("Lowercase Letters? YES or NO")
   alphabetLower = alphabetLower.toUpperCase();
 
@@ -78,6 +79,7 @@ function generatePassword(){
   } else {
     
   };
+  console.log(alphabetLower);
   var alphabetUpper = window.prompt("Uppercase Letters? YES or NO")
   alphabetUpper = alphabetUpper.toUpperCase();
   if (alphabetUpper == "YES") {
@@ -85,15 +87,22 @@ function generatePassword(){
   } else {
     
   };
+  console.log(alphabetUpper);
   var numbers = window.prompt("Numbers? YES or NO")
- 
+  numbers = numbers.toUpperCase();
   if (numbers == "YES") {
 
   } else {
     
   }
+  console.log(numbers);
   return;
+
 };
+
+
+//gonna try to make a loop to generate this code
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
