@@ -55,15 +55,15 @@ var special = [
 ]; 
 
 function generatePassword(){
-  var passwordLength = window.prompt("Let's get you a fancy new password!  Please choose between 8 and 128 characters.");
-  if (passwordLength > 128) {
-    var passwordLength = prompt("Please try again.  Cannot exceed 128 characters.")
+  var characterCount = window.prompt("Let's get you a fancy new password!  Please choose between 8 and 128 characters.");
+  if (characterCount > 128) {
+    var characterCount = prompt("Please try again.  Cannot exceed 128 characters.")
     generatePassword();
-  } else if (passwordLength < 8) {
-    var passwordLength = prompt("Please try again.  Must have more than 8 characters")
+  } else if (characterCount < 8) {
+    var characterCount = prompt("Please try again.  Must have more than 8 characters")
     generatePassword();
   }
-  console.log(passwordLength)
+  console.log(characterCount)
   
   
   var alphabetLower = window.prompt("Lowercase Letters? YES or NO")
@@ -106,8 +106,7 @@ function generatePassword(){
 var securedPassword = "";
 for (let i = 0; n = passwordLength.length; i++) {
     securedPassword += passwordLength.charAt(Math.floor(Math.random() * n));
-    return securedPassword;
-}
+    }
 
 
 
