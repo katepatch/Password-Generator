@@ -103,9 +103,10 @@ function generatePassword(){
 
 
 //gonna try to make a loop to generate this code
+var length = characterCount
 var securedPassword = "";
-for (let i = 0; n = passwordLength.length; i++) {
-    securedPassword += passwordLength.charAt(Math.floor(Math.random() * n));
+for (let i = 0; n = characterCount.length; i++) {
+    securedPassword += characterCount.charAt(Math.floor(Math.random() * n));
     }
 
 
