@@ -1,34 +1,7 @@
 // Assignment code here
 var characterCount
 var alphabetLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w","x", "y", "z"];
-var alphabetUpper = [
-"A",
-"B",
-"C",
-"D",
-"E",
-"F",
-"G",
-"H",
-"I",
-"J",
-"K",
-"L",
-"M",
-"N",
-"O",
-"P",
-"Q",
-"R",
-"S",
-"T",
-"U",
-"V",
-"W",
-"X",
-"Y",
-"Z"
-];
+var alphabetUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = [
 "1",
 "2",
@@ -53,6 +26,7 @@ var special = [
 "(",
 ")"
 ]; 
+
 
 function generatePassword(){
   var characterCount = window.prompt("Let's get you a fancy new password!  Please choose between 8 and 128 characters.");
@@ -105,14 +79,14 @@ function generatePassword(){
 
 
 //gonna try to make a loop to generate this code
-var min = 8;
-var max = 128;
-var length = characterCount;
-var securedPassword = "";
-for (let i = 0; n = characterCount.length; i , length); ++i; {
-    securedPassword += characterCount.charAt(Math.floor(Math.random() * n));
-    }
-    return securedPassword;
+//var min = 8;
+//var max = 128;
+//var length = characterCount;
+//var passwordText = "";
+//for ( var i = 0; n = characterCount.length; i , length); ++i; {
+  //  String.fromCharCode(Math.floor(Math.random() * n));
+    //}
+    
 
 
 
