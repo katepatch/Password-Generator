@@ -58,6 +58,24 @@ var lower = "abcdefghijklmnopqrstuvwxyz";
 var capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "1234567890"
 var special = "!@#$%^&*()"; 
+
+if (lowerConfirm){
+  count = count + lower;
+}
+
+if (capitalConfirm){
+  count = count + capital;
+}
+
+if (numbersConfirm) {
+  count = count + numbers;
+}
+
+if (specialConfirm){
+  count = count + special;
+}
+
+console.log(count)
 //gonna try to make a loop to generate this code
 //var min = 8;
 //var max = 128;
