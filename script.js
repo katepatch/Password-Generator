@@ -104,6 +104,9 @@ function generatePassword(){
 
 //gonna try to make a loop to generate this code
 var securedPassword = "";
+for (let i = 0; i <securedPassword.length; i++) {
+  
+}
 
 
 
