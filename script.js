@@ -49,9 +49,13 @@ function generatePassword(){
   } else {
   };
   console.log(special)
-  return;
+  
 
-
+  for (var i = 0; i <=characterCount; i++) {
+    var randomNumber = Math.floor(Math.random() * characterCount.length);
+    password += characterCount.substring(randomNumber, randomNumber +1);
+    return;
+  }
 
 };
 
