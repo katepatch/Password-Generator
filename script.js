@@ -1,5 +1,5 @@
 // Assignment code here
-var passwordLength
+var characterCount
 var alphabetLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w","x", "y", "z"];
 var alphabetUpper = [
 "A",
@@ -99,23 +99,27 @@ function generatePassword(){
   console.log(special)
   return;
 
+
+
 };
 
 
 //gonna try to make a loop to generate this code
-var length = characterCount
+var min = 8;
+var max = 128;
+var length = characterCount;
 var securedPassword = "";
-for (let i = 0; n = characterCount.length; i++) {
+for (let i = 0; n = characterCount.length; i , length); ++i; {
     securedPassword += characterCount.charAt(Math.floor(Math.random() * n));
     }
+    return securedPassword;
 
 
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-var min = 8;
-var max = 128;
+
 
 // Write password to the #password input
 function writePassword() {
