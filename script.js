@@ -48,13 +48,30 @@ function generatePassword(){
     if (specialConfirm == "YES"){
   } else {
   };
-  console.log(specialC)
+  console.log(specialConfirm)
 
 
 };
 
-function generatePassword(){
-var count = ""
+
+
+//gonna try to make a loop to generate this code
+//var min = 8;
+//var max = 128;
+  
+
+
+
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+
+
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  var count = ""
 var lower = "abcdefghijklmnopqrstuvwxyz";
 var capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "1234567890"
@@ -77,22 +94,6 @@ if (specialConfirm){
 }
 
 console.log(count)
-//gonna try to make a loop to generate this code
-//var min = 8;
-//var max = 128;
-  
-
-}
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
