@@ -6,7 +6,7 @@ var numbersConfirm
 var specialConfirm
 
 
-function passwordPrompt(){
+function generatePassword(){
   countConfirm = prompt("Let's get you a fancy new password!  Please choose between 8 and 128 characters.");
   if (countConfirm > 7 && countConfirm < 129 && Number(countConfirm) !==Nan){
 
