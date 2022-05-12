@@ -1,48 +1,57 @@
 // Assignment code here
-var countConfirm
-var lowerConfirm
-var capitalConfirm
-var numbersConfirm
-var specialConfirm
+var count = ""
+var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w","x", "y", "z"];
+var capital = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]; 
 
 
 function generatePassword(){
-  countConfirm = prompt("Let's get you a fancy new password!  Please choose between 8 and 128 characters.");
-  if (countConfirm > 7 && countConfirm < 129 && Number(countConfirm) !==Nan){
-
-    lowerConfirm = confirm("Do you want lower case letters?");
-    capitalConfirm = confirm("Do you want capital letters?");
-    numbersConfirm = confirm("Do you want numbers?");
-    specialConfirm = confirm("Do you want special characters?");
-
-    if(lowerConfirm != false || capitalConfirm != false || numbersConfirm != false || specialConfirm != false)
-      
-      if (lowerConfirm == false){
-        var lowerConfirm = "No";
-      } else {
-        lowerConfirm = "Yes";
-      }
-      console.log(lowerConfirm)
-      if (capitalConfirm == false){
-        var capitalConfirm = "No";
-      } else {
-        capitalConfirm = "Yes"
-      }
-      console.log(capitalConfirm);
-      if (numbersConfirm == false){
-        var numbersConfirm = "No";
-      } else {
-        numbersConfirm = "Yes";
-      }
-      console.log (numbersConfirm)
-      if (specialConfirm == false){
-        var specialConfirm = "No"
-      } else {
-        specialConfirm = "Yes"
-      }
-      console.log(specialConfirm)
+  var count = window.prompt("Let's get you a fancy new password!  Please choose between 8 and 128 characters.");
+  if (count > 128) {
+    var count = prompt("Please try again.  Cannot exceed 128 characters.")
+    generatePassword();
+  } else if (count < 8) {
+    var count = prompt("Please try again.  Must have more than 8 characters")
+    generatePassword();
   }
-}
+  console.log(count)
+  
+  
+  var lower = window.prompt("Lowercase Letters? YES or NO")
+  lower = lower.toUpperCase();
+
+  if (lower == "YES") {
+
+  } else {
+    
+  };
+  console.log(lower);
+  var capital = window.prompt("Uppercase Letters? YES or NO")
+  capital = capital.toUpperCase();
+  if (capital == "YES") {
+
+  } else {
+    
+  };
+  console.log(capital);
+  var numbers = window.prompt("Numbers? YES or NO")
+  numbers = numbers.toUpperCase();
+  if (numbers == "YES") {
+
+  } else {
+    
+  }
+  console.log(numbers);
+  var special = window.prompt("Special Characters? YES or NO")
+  special = special.toUpperCase();
+    if (special == "YES"){
+  } else {
+  };
+  console.log(special)
+
+
+};
 
 var count = ""
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w","x", "y", "z"];
