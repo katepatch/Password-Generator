@@ -1,4 +1,6 @@
 // Assignment code here
+var result;
+var passwordEl = document.getElementById("password")
 var countConfirm
 var lowerConfirm
 var capitalConfirm
@@ -20,11 +22,11 @@ var allChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 function generatePassword(){
   var countConfirm = window.prompt("Let's get you a fancy new password!  Please choose between 8 and 128 characters.");
   if (countConfirm > 128) {
-    var count = prompt("Please try again.  Cannot exceed 128 characters.")
-    generatePassword();
+    alert("Please try again.  Cannot exceed 128 characters.")
+    return
   } else if (countConfirm < 8) {
-    var countConfirm = prompt("Please try again.  Must have more than 8 characters")
-    generatePassword();
+    alert("Please try again.  Must have more than 8 characters")
+    return
   }
   console.log(countConfirm)
    
@@ -45,73 +47,93 @@ function generatePassword(){
   } else if (lowerConfirm == true && capitalConfirm == false && numbersConfirm == false && specialConfirm == false) {
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-    output += lower[Math.floor(Math.random() * lower.length)]
+    output = lower[Math.floor(Math.random() * lower.length)]
+    result += output
     console.log(output)
+    passwordEl.append(output)
     }
     generatePassword = output;
     return generatePassword;
   } else if (lowerConfirm == false && capitalConfirm == true && numbersConfirm == false & specialConfirm == false){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-      output += capital[Math.floor(Math.random() * capital.length)]
+      output = capital[Math.floor(Math.random() * capital.length)]
+      result += output 
       console.log(output)
+      passwordEl.append(output)
     }
     generatePassword = output;
   } else if(lowerConfirm == false && capitalConfirm == false && numbersConfirm == true & specialConfirm == false){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-      output += numbers[Math.floor(Math.random() * numbers.length)]
+      output = numbers[Math.floor(Math.random() * numbers.length)]
+      result += output
       console.log(output)
+      passwordEl.append(output)
     }
     generatePassword = output;
   } else if (lowerConfirm == false && capitalConfirm == false && numbersConfirm == false & specialConfirm == true){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-      output += special[Math.floor(Math.random() * special.length)]
+      output = special[Math.floor(Math.random() * special.length)]
+      result += output
       console.log(output)
+      passwordEl.append(output)
     }
     generatePassword = output;
   } 
   else if (lowerConfirm == true && capitalConfirm == true && numbersConfirm == false & specialConfirm == false){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-      output += lowerCapital[Math.floor(Math.random() * lowerCapital.length)]
+      output = lowerCapital[Math.floor(Math.random() * lowerCapital.length)]
+      result += output
       console.log(output)
+      passwordEl.append(output)
     }
     generatePassword = output;
   }   else if (lowerConfirm == true && capitalConfirm == false && numbersConfirm == true & specialConfirm == false){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-      output += lowerNumbers[Math.floor(Math.random() * lowerNumbers.length)]
+      output = lowerNumbers[Math.floor(Math.random() * lowerNumbers.length)]
+      result += output
       console.log(output)
+      passwordEl.append(output)
     }
     generatePassword = output;
   } else if (lowerConfirm == true && capitalConfirm == false && numbersConfirm == true & specialConfirm == true){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-      output += lowerSpecial[Math.floor(Math.random() * lowerSpecial.length)]
+      output = lowerSpecial[Math.floor(Math.random() * lowerSpecial.length)]
+      result += output
       console.log(output)
+      passwordEl.append(output)
     }
     generatePassword = output;
   } else if (lowerConfirm == false && capitalConfirm == true && numbersConfirm == true & specialConfirm == false){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-      output += capitalNumbers[Math.floor(Math.random() * capitalNumbers.length)]
+      output = capitalNumbers[Math.floor(Math.random() * capitalNumbers.length)]
+      result += output
       console.log(output)
+      passwordEl.append(output)
     }
     generatePassword = output;
   } else if (lowerConfirm == false && capitalConfirm == true && numbersConfirm == false & specialConfirm == true){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-      output += capitalSpecial[Math.floor(Math.random() * capitalSpecial.length)]
+      output = capitalSpecial[Math.floor(Math.random() * capitalSpecial.length)]
+      result += output
       console.log(output)
+      passwordEl.append(output)
     }
     generatePassword = output;
   } else if (lowerConfirm == true && capitalConfirm == false && numbersConfirm == true & specialConfirm == true){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-      output += numbersSpecial[Math.floor(Math.random() * numbersSpecial.length)]
+      output = numbersSpecial[Math.floor(Math.random() * numbersSpecial.length)]
+      result += output
       console.log(output)
+      passwordEl.append(output)
     }
     generatePassword = output;
   }
