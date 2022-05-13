@@ -44,15 +44,18 @@ function generatePassword(){
     output += lower[Math.floor(Math.random() * lower.length)]
     console.log(output)
     }
-  }generatePassword = output;
+  }
+  generatePassword = output;
   if (lowerConfirm == false && capitalConfirm == true && numbersConfirm == false & specialConfirm == true){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
       output += capital[Math.floor(Math.random() * capital.length)]
       console.log(output)
     }
-  }generatePassword = output;
-  return generatePassword;
+  }
+  generatePassword = output;
+  
+return generatePassword;
   
 }
 
