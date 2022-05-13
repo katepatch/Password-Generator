@@ -12,3 +12,5 @@ This has been an incredibly frustrating assignment!  I have been looking all ove
 
 I was able to work with a tutor and she helped me understand the logic a lot better.  I was able to fix it up so now the code has been de-bugged and works great
 ![screenshot](images/PG-screen-shot.png)
+
+I know that there are simpler ways to do this but this was the way I got it too work for me with what I know.  Overtime I know I will be able to make this look cleaner and much simpler
