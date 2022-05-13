@@ -36,20 +36,25 @@ function generatePassword(){
   console.log(specialConfirm)
 
   if (lowerConfirm == false && capitalConfirm == false && numbersConfirm == false && specialConfirm == false) {
-    alert("Must select at lease one parameter for password generation")
+    alert("You must confirm at least one type of character to proceed")
     generatePassword()
-  
-  } else if (lowerConfirm == true && capitalConfirm == false && numbersConfirm ==false && specialConfirm == false){
+  } else if (lowerConfirm == true && capitalConfirm == false && numbersConfirm == false && specialConfirm == false) {
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
-      output += lower[Math.floor(Math.random() * lower.length)]
+    output += lower[Math.floor(Math.random() * lower.length)]
+    console.log(output)
+    }
+  }generatePassword = output;
+  if (lowerConfirm == false && capitalConfirm == true && numbersConfirm == false & specialConfirm == true){
+    var output = ""
+    for (var i = 0; i < countConfirm; i++) {
+      output += capital[Math.floor(Math.random() * capital.length)]
       console.log(output)
     }
-  }
-  generatePassword = output
-
+  }generatePassword = output;
   return generatePassword;
-};
+  
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -61,33 +66,6 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  
-
-  for (var i = 0; i <=count; i++) {
-    var randomNumber = Math.floor(Math.random() * count.length);
-    password += count.substring(randomNumber, randomNumber +1);
-
-if (lowerConfirm){
-  count = count + lower;
-}
-
-if (capitalConfirm){
-  count = count + capital;
-}
-
-if (numbersConfirm) {
-  count = count + numbers;
-}
-
-if (specialConfirm){
-  count = count + special;
-}
-
-console.log(count)
-
-  passwordText.value = password;
-
-}
 }
 
 // Add event listener to generate button
