@@ -18,36 +18,17 @@ function generatePassword(){
   console.log(countConfirm)
   
   
-  var lowerConfirm = window.prompt("Lowercase Letters? YES or NO")
-  lowerConfirm = lowerConfirm.toUpperCase();
-
-  if (lowerConfirm == "YES") {
-
-  } else {
-    
-  };
+  var lowerConfirm = confirm("Confirm Lower Case letters?")
+  
   console.log(lowerConfirm);
-  var capitalConfirm = window.prompt("Uppercase Letters? YES or NO")
-  capitalConfirm = capitalConfirm.toUpperCase();
-  if (capitalConfirm == "YES") {
-
-  } else {
-    
-  };
+  var capitalConfirm = confirm("Confirm Capital letters?")
+  
   console.log(capitalConfirm);
-  var numbersConfirm = window.prompt("Numbers? YES or NO")
-  numbersConfirm = numbersConfirm.toUpperCase();
-  if (numbersConfirm == "YES") {
-
-  } else {
-    
-  }
+  var numbersConfirm = confirm("Confirm Numbers?")
+  
   console.log(numbersConfirm);
-  var specialConfirm = window.prompt("Special Characters? YES or NO")
-  specialConfirm = specialConfirm.toUpperCase();
-    if (specialConfirm == "YES"){
-  } else {
-  };
+  var specialConfirm = confirm("Confirm Special Characters?")
+  
   console.log(specialConfirm)
 
 
