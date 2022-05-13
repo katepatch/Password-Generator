@@ -57,7 +57,7 @@ function generatePassword(){
       console.log(output)
     }
     generatePassword = output;
-  } else if(lowerConfirm == false && capitalConfirm == false && numbersConfirm == true & specialConfirm == true){
+  } else if(lowerConfirm == false && capitalConfirm == false && numbersConfirm == true & specialConfirm == false){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
       output += numbers[Math.floor(Math.random() * numbers.length)]
@@ -118,7 +118,7 @@ function generatePassword(){
   generatePassword = output;
   
   
-return generatePassword();
+return
   
 }
 
