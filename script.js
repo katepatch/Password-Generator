@@ -6,6 +6,7 @@ var numbersConfirm
 var specialConfirm
 var count = ""
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w","x", "y", "z"];  var capital = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var capital = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]; 
 
@@ -44,16 +45,32 @@ function generatePassword(){
     output += lower[Math.floor(Math.random() * lower.length)]
     console.log(output)
     }
-  }
-  generatePassword = output;
-  if (lowerConfirm == false && capitalConfirm == true && numbersConfirm == false & specialConfirm == true){
+    generatePassword = output;
+  } else if (lowerConfirm == false && capitalConfirm == true && numbersConfirm == false & specialConfirm == false){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
       output += capital[Math.floor(Math.random() * capital.length)]
       console.log(output)
     }
+    generatePassword = output;
+  } else if(lowerConfirm == false && capitalConfirm == false && numbersConfirm == true & specialConfirm == true){
+    var output = ""
+    for (var i = 0; i < countConfirm; i++) {
+      output += numbers[Math.floor(Math.random() * numbers.length)]
+      console.log(output)
+    }
+    generatePassword = output;
+  } else if (lowerConfirm == false && capitalConfirm == false && numbersConfirm == false & specialConfirm == true){
+    var output = ""
+    for (var i = 0; i < countConfirm; i++) {
+      output += special[Math.floor(Math.random() * special.length)]
+      console.log(output)
+    }
+    generatePassword = output;
   }
-  generatePassword = output;
+  
+  
+  
   
 return generatePassword;
   
