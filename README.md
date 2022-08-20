@@ -1,4 +1,4 @@
-# Challenge Three
+# Password Generator
 
 ## Password Generator
 
