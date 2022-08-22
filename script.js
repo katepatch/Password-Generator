@@ -1,6 +1,6 @@
 // Assignment code here
 var result;
-var passwordEl = document.getElementById("password")
+var password = document.getElementById("password")
 var countConfirm
 var lowerConfirm
 var capitalConfirm
@@ -127,7 +127,7 @@ function generatePassword(){
       passwordEl.append(output)
     }
     generatePassword = output;
-  } else if (lowerConfirm == true && capitalConfirm == false && numbersConfirm == true & specialConfirm == true){
+  } else if (lowerConfirm == false && capitalConfirm == false && numbersConfirm == true & specialConfirm == true){
     var output = ""
     for (var i = 0; i < countConfirm; i++) {
       output = numbersSpecial[Math.floor(Math.random() * numbersSpecial.length)]
